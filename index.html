@@ -49,7 +49,7 @@
     h2 {
       font-weight: 400;
       color: #cbd5f5;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     .hero-img {
@@ -110,10 +110,6 @@
       box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5);
     }
 
-    .whatsapp-btn {
-      background: linear-gradient(135deg, #25D366, #1ebe5d);
-    }
-
     .payment {
       margin-top: 40px;
       text-align: center;
@@ -137,9 +133,26 @@
       text-decoration: none;
     }
 
+    /* Hide/Show based on device */
+    .mobile-only {
+      display: none;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+
     @media(max-width:700px) {
       .topics {
         grid-template-columns: 1fr;
+      }
+
+      .mobile-only {
+        display: block;
+      }
+
+      .desktop-only {
+        display: none;
       }
     }
   </style>
@@ -179,20 +192,22 @@
         target="_blank">
         <button class="btn">🚀 Register Now</button>
       </a>
-
     </div>
 
-    <div class="cta">
-      <!-- WhatsApp Group Button -->
-      <a href="upi://pay?pa=gurpreetsingh.del11-1@oksbi&pn=Gurpreet%20Singh&am=99.00&cu=INR&aid=uGICAgIDVg8uCRQ"
-        target="_blank">
-        <button class="btn whatsapp-btn">💬 Join WhatsApp Group</button>
+    <!-- Mobile Payment Button -->
+    <div class="cta mobile-only">
+      <a href="upi://pay?pa=gurpreetsingh.del11-1@oksbi&pn=Gurpreet%20Singh&am=99.00&cu=INR" target="_blank">
+        <button class="btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);">
+          💳 Pay Now
+        </button>
       </a>
+      <p style="font-size:13px; color:#cbd5f5;">Opens UPI apps like GPay / PhonePe</p>
     </div>
 
-    <div class="payment">
-      <h3>💳 Pay & Upload Screenshot in Form</h3>
-      <p>Scan QR below to complete payment</p>
+    <!-- Desktop QR Only -->
+    <div class="payment desktop-only">
+      <h3>💳 Scan QR to Pay</h3>
+      <p>Use your phone to scan this QR</p>
       <img src="./qrcode.jpeg" alt="QR Code">
     </div>
 
@@ -201,7 +216,7 @@
       <p>In case of any query please contact us via email or phone</p>
       <br>
       <p>📧 Email: <a href="mailto:wfmgurukul@gmail.com">wfmgurukul@gmail.com</a></p>
-      <p>📞 Phone: <a href="tel:1234567890">9599141205</a></p>
+      <p>📞 Phone: <a href="tel:9599141205">9599141205</a></p>
     </div>
 
   </div>
