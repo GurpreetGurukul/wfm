@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurpreet WFM Workshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+                url('https://images.unsplash.com/photo-1551288049-bebda4e38f71');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f97316;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: #cbd5f5;
+            margin-bottom: 15px;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .topics {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .topic {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .cta {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #f97316, #fb923c);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5);
+        }
+
+        .payment {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .payment img {
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #f97316;
+            text-decoration: none;
+        }
+
+        @media(max-width:700px) {
+            .topics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <style>
+        .navbar {
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .nav-links a {
+            color: #f97316;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fb923c;
+        }
+
+        @media(max-width:700px) {
+            .navbar {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-logo">WFM Gurukul</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="badge">🔥 Limited Seats • Premium Batch</div>
+
+        <h1>📊 WFM Forecasting, Scheduling & Capacity Planning</h1>
+        <h2>2 Months Program • 8 Live Sessions</h2>
+        <h2>Pay only ₹2999/-</h2>
+
+        <img class="hero-img" src="./bg.png" alt="analytics">
+
+        <div class="details">
+            <div class="card">📅 Duration: 2 Months</div>
+            <div class="card">🎓 Total Classes: 8 Sessions</div>
+            <div class="card">💻 Virtual</div>
+        </div>
+        <div class="details">
+            <div class="card">👥 Max 10 Candidates</div>
+            <div class="card">🎯 Hands-on Practical Learning</div>
+            <div class="card">📈 Real-Time Scenarios</div>
+        </div>
+        <div class="topics">
+            <div class="topic">✔ Forecasting Basics</div>
+            <div class="topic">✔ Types of Forecasting</div>
+            <div class="topic">✔ Volume Forecasting</div>
+            <div class="topic">✔ Seasonal Trends</div>
+            <div class="topic">✔ Staffing Calculation</div>
+            <div class="topic">✔ Scheduling</div>
+            <div class="topic">✔ Over/Under Management</div>
+            <div class="topic">✔ Capacity Planning</div>
+        </div>
+
+
+        <div class="cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd024SPbOJl0FcTOyjuLDXOE3iLA30vfKKzbPKxQbU21Hbjqg/viewform?usp=dialog"
+                target="_blank">
+                <button class="btn">🚀 Enroll Now</button>
+            </a>
+        </div>
+        <div class="payment desktop-only">
+            <h3>💰 Fees Structure</h3>
+            <p>✔ One-time Payment: ₹2999</p>
+            <p>✔ Installment Option: ₹1599 + ₹1599</p>
+
+            <br>
+
+            <h3>🔒 Seat Reservation</h3>
+            <p>✔ ₹499 Booking Amount (Non-refundable)</p>
+            <p>✔ Adjusted in Total Course Fee</p>
+
+            <br>
+
+            <h3>💳 Scan QR to Pay</h3>
+            <p>Secure your seat by paying ₹499</p>
+            <img src="./qrcode.jpeg" alt="QR Code">
+        </div>
+
+
+
+        <div class="footer">
+            <p>After payment verification, course details will be shared within 12 hours.</p>
+            <p>📌 Limited seats available. Secure your spot early!</p>
+            <br>
+            <p>📧 Email: <a href="mailto:wfmgurukul@gmail.com">wfmgurukul@gmail.com</a></p>
+            <p>📞 Phone: <a href="tel:9599141205">9599141205</a></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurpreet WFM Workshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+                url('https://images.unsplash.com/photo-1551288049-bebda4e38f71');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f97316;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: #cbd5f5;
+            margin-bottom: 15px;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .topics {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .topic {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .cta {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #f97316, #fb923c);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5);
+        }
+
+        .payment {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .payment img {
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #f97316;
+            text-decoration: none;
+        }
+
+        /* Hide/Show based on device */
+        /* .mobile-only {
+      display: none;
+    } */
+
+        /* .desktop-only {
+      display: block;
+    } */
+
+        @media(max-width:700px) {
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            /* .mobile-only {
+        display: block;
+      } */
+
+            /* .desktop-only {
+        display: none;
+      } */
+        }
+    </style>
+    <style>
+        .navbar {
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .nav-links a {
+            color: #f97316;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fb923c;
+        }
+
+        @media(max-width:700px) {
+            .navbar {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-logo">WFM Gurukul</div>
+        <div class="nav-links">
+            <a href="index.html">🏠 Home</a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="badge">🔥 Limited Seats • Practical Session</div>
+
+        <h1>📊 WFM Practical Workshop</h1>
+        <h2>Forecasting • FTE Calculation • Scheduling • Capacity Planning</h2>
+        <h2>Pay only ₹99/-</h2>
+
+        <img class="hero-img" src="./bg.png" alt="analytics">
+
+        <div class="details">
+            <div class="card">📅 26th April 2026</div>
+            <div class="card">⏰ 02:00 PM – 04:00 PM</div>
+            <div class="card">💻 Virtual</div>
+        </div>
+
+        <div class="topics">
+            <div class="topic">✔ Forecasting Basics</div>
+            <div class="topic">✔ Types of Forecasting</div>
+            <div class="topic">✔ Volume Forecasting</div>
+            <div class="topic">✔ Seasonal Trends</div>
+            <div class="topic">✔ Staffing Calculation</div>
+            <div class="topic">✔ Scheduling</div>
+            <div class="topic">✔ Over/Under Management</div>
+            <div class="topic">✔ Capacity Planning</div>
+        </div>
+
+        <div class="cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgkVbj2kz4Po2DD5GTT77bngZYlTba5zOUVWN-JCi153fmTQ/viewform"
+                target="_blank">
+                <button class="btn">🚀 Register Now</button>
+            </a>
+        </div>
+
+        <!-- Mobile Payment Button -->
+        <!-- <div class="cta mobile-only">
+      <a href="upi://pay?pa=gurpreetsingh.del11-1@oksbi&pn=Gurpreet%20Singh&aid=uGICAgIDVg8uCRQ">`
+        <button class="btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);">
+          💳 Pay Now
+        </button>
+      </a>
+      <p style="font-size:13px; color:#cbd5f5;">Opens UPI apps like GPay / PhonePe</p>
+    </div> -->
+
+        <!-- Desktop QR Only -->
+        <div class="payment desktop-only">
+            <h3>💳 Scan QR to Pay</h3>
+            <p>Use your phone to scan this QR</p>
+            <img src="./qrcode.jpeg" alt="QR Code">
+        </div>
+
+        <div class="footer">
+            <p>After payment verification, meeting details will be shared via email within 12 hours.</p>
+            <p>In case of any query please contact us via email or phone</p>
+            <br>
+            <p>📧 Email: <a href="mailto:wfmgurukul@gmail.com">wfmgurukul@gmail.com</a></p>
+            <p>📞 Phone: <a href="tel:9599141205">9599141205</a></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
