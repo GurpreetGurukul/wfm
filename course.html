@@ -177,6 +177,32 @@
             }
         }
     </style>
+    <style>
+        .topics-new {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .topics-new ol {
+            padding-left: 20px;
+        }
+
+        .topics-new li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .topics-new li:hover {
+            background: rgba(249, 115, 22, 0.15);
+            transform: translateX(5px);
+        }
+    </style>
 </head>
 
 <body>
@@ -207,17 +233,21 @@
             <div class="card">🎯 Hands-on Practical Learning</div>
             <div class="card">📈 Real-Time Scenarios</div>
         </div>
-        <div class="topics">
-            <div class="topic">✔ Forecasting Basics</div>
-            <div class="topic">✔ Types of Forecasting</div>
-            <div class="topic">✔ Volume Forecasting</div>
-            <div class="topic">✔ Seasonal Trends</div>
-            <div class="topic">✔ Staffing Calculation</div>
-            <div class="topic">✔ Scheduling</div>
-            <div class="topic">✔ Over/Under Management</div>
-            <div class="topic">✔ Capacity Planning</div>
+        <div class="topics-new">
+            <h3 style="margin-bottom:15px;">📚 Course Topics</h3>
+            <ol>
+                <li>Introduction to Workforce Management (WFM)</li>
+                <li>Basics of Demand Forecasting</li>
+                <li>Forecasting Methods (Moving Average, Trends)</li>
+                <li>Forecast Accuracy & Error Measurement (MAPE, MAD)</li>
+                <li>Workload Calculation (Volume × AHT)</li>
+                <li>Capacity Planning & FTE Calculation</li>
+                <li>Erlang C Fundamentals</li>
+                <li>Scheduling Techniques & Shift Planning</li>
+                <li>Shrinkage, Occupancy & Utilization</li>
+                <li>Real-Time Management & Intraday Adjustments</li>
+            </ol>
         </div>
-
 
         <div class="cta">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd024SPbOJl0FcTOyjuLDXOE3iLA30vfKKzbPKxQbU21Hbjqg/viewform?usp=dialog"
