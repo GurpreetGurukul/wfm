@@ -4,105 +4,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gurpreet WFM Workshop</title>
+  <title>WFM Gurukul</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: Poppins
     }
 
     body {
-      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
-        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71');
-      background-size: cover;
-      background-position: center;
-      color: white;
+      color: #fff;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.12), transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.12), transparent 40%),
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0),
+        #020617;
+
+      background-size: auto, auto, auto, 30px 30px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .badge {
-      display: inline-block;
-      background: #f97316;
-      padding: 8px 18px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      font-size: 14px;
+    nav h2 {
+      color: #f97316
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-weight: 400;
+    nav a {
       color: #cbd5f5;
-      margin-bottom: 15px;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
     }
 
-    .hero-img {
-      width: 100%;
-      border-radius: 16px;
+    nav a:hover {
+      color: #fff
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(180deg, #020617, #0f172a)
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      font-size: 18px;
       margin-bottom: 25px;
     }
 
-    .details {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin: 20px 0;
+    .hero .btn {
+      font-size: 18px;
+      padding: 16px 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin: 50px 20px
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 20px;
-      border-radius: 12px;
-      margin: 10px;
-      flex: 1;
-      min-width: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      transition: 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .topics {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6)
     }
 
-    .topic {
-      background: rgba(255, 255, 255, 0.06);
-      padding: 10px;
-      border-radius: 8px;
+    .card h2 {
+      margin-bottom: 10px;
     }
 
-    .cta {
-      margin-top: 40px;
-      text-align: center;
+    .card p {
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+      color: #f97316;
+      margin: 10px 0;
     }
 
     .btn {
-      padding: 16px 32px;
-      font-size: 20px;
-      background: linear-gradient(135deg, #f97316, #fb923c);
+      margin-top: 15px;
+      padding: 14px 24px;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f97316, #fb923c);
       color: white;
       cursor: pointer;
+      font-size: 16px;
       transition: 0.3s;
-      margin: 10px;
     }
 
     .btn:hover {
@@ -110,116 +134,68 @@
       box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5);
     }
 
-    .payment {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .payment img {
-      width: 250px;
-      border-radius: 12px;
-      margin-top: 10px;
+    .highlight {
+      position: absolute;
+      top: 15px;
+      right: -40px;
+      background: #f97316;
+      padding: 5px 50px;
+      transform: rotate(45deg);
+      font-size: 12px;
     }
 
     .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #94a3b8;
       text-align: center;
+      padding: 30px;
+      color: #64748b
     }
-
-    .footer a {
-      color: #f97316;
-      text-decoration: none;
-    }
-
-    /* Hide/Show based on device */
-    /* .mobile-only {
-      display: none;
-    } */
-
-    /* .desktop-only {
-      display: block;
-    } */
 
     @media(max-width:700px) {
-      .topics {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: 34px;
       }
-
-      /* .mobile-only {
-        display: block;
-      } */
-
-      /* .desktop-only {
-        display: none;
-      } */
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <nav>
+    <h2>WFM Gurukul</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="workshop.html">Workshop</a>
+      <a href="course.html">Course</a>
+    </div>
+  </nav>
 
-    <div class="badge">🔥 Limited Seats • Practical Session</div>
+  <section class="hero">
+    <h1>📊 Master Workforce Management Skills</h1>
+    <p>Learn Forecasting, Scheduling & Capacity Planning with real-world scenarios</p>
+    <!-- <a href="course.html"><button class="btn">🎓 Explore Full Course</button></a> -->
+  </section>
 
-    <h1>📊 WFM Practical Workshop</h1>
-    <h2>Forecasting • FTE Calculation • Scheduling • Capacity Planning</h2>
-    <h2>Pay only ₹99/-</h2>
+  <div class="cards">
 
-    <img class="hero-img" src="./bg.png" alt="analytics">
-
-    <div class="details">
-      <div class="card">📅 26th April 2026</div>
-      <div class="card">⏰ 02:00 PM – 04:00 PM</div>
-      <div class="card">💻 Virtual</div>
+    <div class="card">
+      <div class="highlight">Starter</div>
+      <h2>🚀 2-Hour Workshop</h2>
+      <p>Quick practical learning session for beginners</p>
+      <div class="price">₹99</div>
+      <a href="workshop.html"><button class="btn">Explore</button></a>
     </div>
 
-    <div class="topics">
-      <div class="topic">✔ Forecasting Basics</div>
-      <div class="topic">✔ Types of Forecasting</div>
-      <div class="topic">✔ Volume Forecasting</div>
-      <div class="topic">✔ Seasonal Trends</div>
-      <div class="topic">✔ Staffing Calculation</div>
-      <div class="topic">✔ Scheduling</div>
-      <div class="topic">✔ Over/Under Management</div>
-      <div class="topic">✔ Capacity Planning</div>
-    </div>
-
-    <div class="cta">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgkVbj2kz4Po2DD5GTT77bngZYlTba5zOUVWN-JCi153fmTQ/viewform"
-        target="_blank">
-        <button class="btn">🚀 Register Now</button>
-      </a>
-    </div>
-
-    <!-- Mobile Payment Button -->
-    <!-- <div class="cta mobile-only">
-      <a href="upi://pay?pa=gurpreetsingh.del11-1@oksbi&pn=Gurpreet%20Singh&aid=uGICAgIDVg8uCRQ">`
-        <button class="btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);">
-          💳 Pay Now
-        </button>
-      </a>
-      <p style="font-size:13px; color:#cbd5f5;">Opens UPI apps like GPay / PhonePe</p>
-    </div> -->
-
-    <!-- Desktop QR Only -->
-    <div class="payment desktop-only">
-      <h3>💳 Scan QR to Pay</h3>
-      <p>Use your phone to scan this QR</p>
-      <img src="./qrcode.jpeg" alt="QR Code">
-    </div>
-
-    <div class="footer">
-      <p>After payment verification, meeting details will be shared via email within 12 hours.</p>
-      <p>In case of any query please contact us via email or phone</p>
-      <br>
-      <p>📧 Email: <a href="mailto:wfmgurukul@gmail.com">wfmgurukul@gmail.com</a></p>
-      <p>📞 Phone: <a href="tel:9599141205">9599141205</a></p>
+    <div class="card">
+      <div class="highlight">Popular</div>
+      <h2>🎓 Full Course</h2>
+      <p>2 Month in-depth training with hands-on practice</p>
+      <div class="price">₹2999</div>
+      <a href="course.html"><button class="btn">Explore</button></a>
     </div>
 
   </div>
+
+  <div class="footer">© 2026 WFM Gurukul • Learn • Grow • Succeed</div>
 
 </body>
 
